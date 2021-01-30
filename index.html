@@ -1,18 +1,65 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!-- Кодування HTML-сторінки потрібно вказувати для того,
+        щоб веб-браузер міг правильно відображати текст на сторінці
+        https://htmlacademy.ru/courses/26/run/4 -->
         <meta charset="utf-8">
+        <!-- Тег для правильного відображення сторінки на мобільних девайсах
+        https://css-tricks.com/snippets/html/responsive-meta-tag/ -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Заголовок для сторінки — http://htmlbook.ru/html/title -->
         <title>02 html page</title>
+        <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+        <!-- Підключення до сторінки кастомний шрифт із зовнішнього ресурсу Google-Fonts -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
+        <!-- Підключення до сторінки файл таблиці стилів -->
         <link rel="stylesheet" href="./styles/styles.css">
     </head>
    
     <body>
-        <article>
-            <h1>Валюти країн світу</h1>
+        <article class="currency-article">
+            <!-- Семантичний заголовок для блока article у вигляді h1 -->
+            <h1 class="currency-article__title">Валюти країн світу</h1>
 
-            <img src="./images/currency-img.jpg" width="100" align="center" alt="currency image">
+            <!-- Імплементованний/вставленний до блоку article малюнок -->
+            <img class="currency-article__image" src="./images/currency-img.jpg" align="center" alt="currency image">
+
+            <!-- Таблиця із данними -->
+            <table class="currency-article__table">
+                <!-- Заголовок таблиці -->
+                <thead>
+                    <!-- tr - тег-рядок таблиці -->
+                    <tr>
+                        <!-- th - тег-колонка заголовку таблиці -->
+                        <th>Країна</th>
+                        <th>Назва валюти</th>
+                        <th>Скорочена Назва</th>
+                    </tr>
+                </thead>
+                <!-- Тіло таблиці -->
+                <tbody>
+                    <tr>
+                        <!-- td - тег-колонка тіла таблиці -->
+                        <td>США</td>
+                        <td>Доллар</td>
+                        <td class="currency-article__table-currency">usd</td>
+                    </tr>
+                    <tr>
+                        <td>Великобританія</td>
+                        <td>Фунт Стерлінг</td>
+                        <td class="currency-article__table-currency">gbp</td>
+                    </tr>
+                    <tr>
+                        <!-- <b> - тег який робить текс жирним
+                         https://developer.mozilla.org/uk/docs/Web/HTML/%D0%95%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82 -->
+                        <td><b>Україна</b></td>
+                        <td><b>Гривня</b></td>
+                        <td class="currency-article__table-currency"><b>uah</b></td>
+                    </tr>
+                </tbody>
+            </table>
         </article>
     </body>
 </html>
